@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="A benchmark dataset for citrus fruit detection.">
+  <meta name="keywords" content="computer vision, object detection and classification, agriculture, citrus">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CitDet: A Benchmark Dataset for Citrus Fruit Detection</title>
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">CitDet: A Benchmark Dataset for Citrus Fruit Detection</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"> Jordan A. James, Heather K. Manchinq, Matthew R. Matti, Kim D. Bowman, Amanda M. Hulse-Kemp, and <a href="https://ranger.uta.edu/~wjbeksi">William J. Beksi</a></span>
+          </div>
+          <div class="is-size-5 publication-university">
+            <span class="author-block">The University of Texas at Arlington</span>
+          </div>
+          <div class="is-size-5 publication-lab">
+            <span class="author-block">
+              <a href="https://rvl.uta.edu">Robotic Vision Laboratory</a></span>
+          </div>
+          <div class="column is-centered">
+            <div class="publication-links">
+              <!-- Paper link -->
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Preprint link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2309.05645.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Preprint</span>
+                </a>
+              </span>
+              <!-- Presentation link -->
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Presentation</span>
+                </a>
+              </span>
+              <!-- Source code link -->
+              <span class="link-block">
+                <a href="https://github.com/robotic-vision-lab/CitDet-A-Benchmark-Dataset-For-Citrus-Fruit-Detection" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Source Code</span>
+                </a>
+              </span>
+              <!-- Dataset link -->
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item vid16_01_raw">
+          <video poster="" id="raw" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/" type="video/mp4">
+          </video>
+        </div>
+        <div class="item vid16_01_detection">
+          <video poster="" id="detection" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/" type="video/mp4">
+          </video>
+        </div>
+        <div class="item vid16_01_tracking">
+          <video poster="" id="tracking" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/" type="video/mp4">
+          </video>
+        </div>
+	    <div class="item vid26_03_raw">
+          <video poster="" id="raw" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/" type="video/mp4">
+          </video>
+        </div>
+        <div class="item vid26_03_detection">
+          <video poster="" id="detection" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/" type="video/mp4">
+          </video>
+        </div>
+        <div class="item vid26_03_tracking">
+          <video poster="" id="tracking" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop" id="Abstract">
+    <div class="columns is-centered">
+      <!-- Abstract -->
+      <div class="column is-full-width">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Despite the fact that significant progress has been made in solving
+            the fruit detection problem, the lack of publicly available
+            datasets has complicated direct comparison of results. For
+            instance, citrus detection has long been of interest in the
+            agricultural research community, yet there is an absence of work,
+            particularly involving public datasets of citrus affected by
+            Huanglongbing (HLB). To address this issue, we enhance
+            state-of-the-art object detection methods for use in typical
+            orchard settings. Concretely, we provide high-resolution images of
+            citrus trees located in an area known to be highly affected by HLB,
+            along with high-quality bounding box annotations of citrus fruit.
+            Fruit on both the trees and the ground are labeled to allow for
+            identification of fruit location, which contributes to advancements
+            in yield estimation and potential measure of HLB impact via fruit
+            drop. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="container is-max-desktop" id="Dataset">
+    <div class="columns is-centered">
+      <!-- Dataset -->
+      <div class="column is-full-width">
+        <h2 class="title is-3">Dataset</h2>
+        <div class="content has-text-justified">
+          <p>
+            The <strong>CitDet</strong> dataset is composed of images captured
+            at the USDA Agricultural Research Service Subtropical Insects and
+            Horticulture Research Unit in Fort Pierce, Florida, between October
+            2021 and October 2022. The orchard contains a large assortment of
+            citrus tree species and is used for genomics and phenotyping
+            research involving citrus infected with HLB. The dataset consists
+            of over 32,000 bounding box annotations for fruit instances
+            contained in 579 high-resolution images. While imaging the plants,
+            we faced the camera in a portrait orientation directly centered on
+            the tree of interest. All images were taken at the edge of the soil
+            in the tree row to simulate a ground-based robot imaging the tree
+            while moving between two rows of trees.
+
+            Data was collected over the course of one year to allow the fruit
+            to be imaged at different stages of the ripening cycle during
+            citrus production from October to March. Due to the nature of HLB
+            and the mixture of fruit maturity, CitDet contains fruit of
+            different colors and sizes. All trees were imaged from both the
+            sunny and shady sides of the tree row and imaging was done over
+            multiple days to account for variations in weather and lighting
+            conditions. The imaged trees consist of over 50 different varieties
+            of citrus. All images include a timestamp, tree ID, and the side of
+            the tree imaged in the file name.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="container is-max-desktop content" id="Citation">
+    <!-- Citation -->
+    <h2 class="title is-3">Citation</h2>
+    <p>
+      If you find this project useful, then please consider citing both our
+      paper and dataset.
+    </p>
+    <pre><code>@article{james2023citdet,
+  title={CitDet: A Benchmark Dataset for Citrus Fruit Detection},
+  author={James, Jordan A and Manching, Heather K and Mattia, Matthew R and Bowman, Kim D and Hulse-Kemp, Amanda M and Beksi, William J},
+  journal={arXiv preprint arXiv:2309.05645},
+  year={2023}
+}</code></pre>
+    <pre><code>@data{,
+  title={CitDet},
+  author={James, Jordan A and Manching, Heather K and Mattia, Matthew R and Bowman, Kim D and Hulse-Kemp, Amanda M and Beksi, William J},
+  publisher={Texas Data Repository},
+  version={V2},
+  url={},
+  doi={},
+  year={2024}
+}</code></pre>
+  </div>
+  <br>
+
+  <div class="container is-max-desktop" id="License">
+    <div class="columns is-centered">
+      <!-- License-->
+      <div class="column is-full-width">
+        <h2 class="title is-3">License</h2>
+        <div class="content has-text-justified">
+          <p>
+            The source code associated with this project is licensed under the 
+            <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.  
+            The <strong>CitDet</strong> dataset is available for non-commercial use under the 
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License ("CC BY-NC-SA 4.0")</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a 
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+            This means you are free to borrow the 
+            <a href="https://github.com/robotic-vision-lab/citdet">source code</a>
+            of this website, we just ask that you link back to this page in the
+            footer. Please remember to remove the analytics code included in
+            the header of this website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
